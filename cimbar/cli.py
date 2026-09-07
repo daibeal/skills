@@ -96,7 +96,15 @@ def build_parser():
     d.add_argument("frames", nargs="+", help="frame image paths or globs")
     d.add_argument("-o", "--output", help="output directory (default: .)")
     d.set_defaults(func=cmd_decode)
+
+    g = sub.add_parser("gui", help="launch the drag-and-drop desktop app")
+    g.set_defaults(func=cmd_gui)
     return p
+
+
+def cmd_gui(args):
+    from .gui import main as gui_main
+    return gui_main()
 
 
 def main(argv=None):

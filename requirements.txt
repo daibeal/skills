@@ -1,3 +1,4 @@
 Pillow>=9
 numpy>=1.20
 reedsolo>=1.7
+tkinterdnd2>=0.3   # optional: enables drag-and-drop in the GUI (tkinter is stdlib)
